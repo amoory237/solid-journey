@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المنتج</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="cart.html" class="nav-cart-link" style="position: relative;">
+                <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Shopping Cart"> <span id="cart-count" class="cart-badge">0</span>
+            </a>
+            <div class="logo">
+                <a href="index.html">Amoory Store</a>
+            </div>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="products.html">المتجر</a></li>
+                <li><a href="cart.html">سلة المشتريات</a></li>
+                <li><a href="login.html" id="account-link">حسابي</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <a href="https://chat.whatsapp.com/DPRjdBAYlEB8E1TPKCH0ZJ?mode=wwt" target="_blank" class="whatsapp-banner">
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon"> تابعنا على الواتساب للحصول على آخر العروض والتحديثات!</p>
+        </a>
+        <div id="product-details-container" class="product-details-container">
+            <!-- سيتم عرض تفاصيل المنتج هنا بواسطة product-details.js -->
+        </div>
+        <div id="product-reviews-container" class="reviews-container">
+            <!-- سيتم عرض قسم المراجعات هنا -->
+        </div>
+        <section id="related-products-container" class="related-products-container">
+            <!-- سيتم عرض المنتجات ذات الصلة هنا -->
+        </section>
+    </main>
+
+    <div id="trending-now">
+        <!-- سيتم عرض المنتجات الرائجة هنا -->
+    </div>
+
+    <footer>
+        <p class="footer-title">تابعنا على</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/share/18r6E3c3fo/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+            <a href="https://www.instagram.com/a_m_o_o._r_y/?utm_source=qr&r=nametag" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+            <a href="https://chat.whatsapp.com/DPRjdBAYlEB8E1TPKCH0ZJ?mode=wwt" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"></a>
+            <a href="https://www.tiktok.com/@amoory_stoor?_r=1&_t=ZS-91GCKhSAP6e" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/TikTok_logo.svg" alt="TikTok"></a>
+        </div>
+        <p>&copy; 2025 متجر عموري. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="common.js"></script>
+    <script src="trending.js"></script>
+    <script src="product-details.js"></script>
+</body>
+</html>

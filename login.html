@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حسابي - متجر عموري</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="announcement-bar">
+        
+    </div>
+    <header>
+        <nav>
+            <a href="cart.html" class="nav-cart-link" style="position: relative;">
+                <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Shopping Cart"> <span id="cart-count" class="cart-badge">0</span>
+            </a>
+            <div class="logo">
+                <a href="index.html">Amoory Store</a>
+            </div>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="products.html">المتجر</a></li>
+                <li><a href="cart.html">سلة المشتريات</a></li>
+                <li><a href="login.html" id="account-link">حسابي</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <a href="https://chat.whatsapp.com/DPRjdBAYlEB8E1TPKCH0ZJ?mode=wwt" target="_blank" class="whatsapp-banner">
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon"> تابعنا على الواتساب للحصول على آخر العروض والتحديثات!</p>
+        </a>
+        <div class="account-container">
+            <div class="form-container" id="login-container">
+                <h2>تسجيل الدخول</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">البريد الإلكتروني</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">كلمة المرور</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <div class="form-group form-group-inline">
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me">تذكرني</label>
+                    </div>
+                    <button type="submit" class="checkout-btn">تسجيل الدخول</button>
+                    <p class="form-switch">
+                        ليس لديك حساب؟ <a href="#" id="show-register">أنشئ حسابًا جديدًا</a> | 
+                        <a href="#" id="show-forgot-password">نسيت كلمة المرور؟</a>
+                    </p>
+                </form>
+            </div>
+
+            <div class="form-container" id="forgot-password-container" style="display: none;">
+                <h2>نسيت كلمة المرور؟</h2>
+                <form id="forgot-password-email-form">
+                    <p>الرجاء إدخال بريدك الإلكتروني لإعادة تعيين كلمة المرور.</p>
+                    <div class="form-group">
+                        <label for="forgot-email">البريد الإلكتروني</label>
+                        <input type="email" id="forgot-email" required>
+                    </div>
+                    <button type="submit" class="checkout-btn">متابعة</button>
+                    <p class="form-switch"><a href="#" id="show-login-from-forgot">العودة لتسجيل الدخول</a></p>
+                </form>
+
+                <form id="verify-code-form" style="display: none;">
+                    <h3>أدخل رمز التحقق</h3>
+                    <p>الرجاء إدخال رمز التحقق الذي أرسلناه إلى بريدك الإلكتروني.</p>
+                    <div class="form-group">
+                        <label for="verification-code">رمز التحقق</label>
+                        <input type="text" id="verification-code" required>
+                    </div>
+                    <button type="submit" class="checkout-btn">تحقق</button>
+                    <p class="form-switch">
+                        <a href="#" id="resend-code">إعادة إرسال الرمز</a> |
+                        <a href="#" id="cancel-reset-password-code">إلغاء</a>
+                    </p>
+                </form>
+
+                <form id="reset-password-form" style="display: none;">
+                    <h3>تعيين كلمة مرور جديدة</h3>
+                    <div class="form-group">
+                        <label for="new-password-reset">كلمة المرور الجديدة</label>
+                        <input type="password" id="new-password-reset" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-new-password-reset">تأكيد كلمة المرور الجديدة</label>
+                        <input type="password" id="confirm-new-password-reset" required>
+                    </div>
+                    <button type="submit" class="checkout-btn">تغيير كلمة المرور</button>
+                    <p class="form-switch"><a href="#" id="cancel-reset-password">إلغاء</a></p>
+                </form>
+            </div>
+
+            <div class="form-container" id="register-container" style="display: none;">
+                <h2>إنشاء حساب جديد</h2>
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="register-name">الاسم</label>
+                        <input type="text" id="register-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">البريد الإلكتروني</label>
+                        <input type="email" id="register-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">كلمة المرور</label>
+                        <input type="password" id="register-password" required>
+                    </div>
+                    <button type="submit" class="checkout-btn">إنشاء الحساب</button>
+                    <p class="form-switch">لديك حساب بالفعل؟ <a href="#" id="show-login">سجل الدخول</a></p>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <div id="trending-now">
+        <!-- سيتم عرض المنتجات الرائجة هنا -->
+    </div>
+
+    <footer>
+        <p class="footer-title">تابعنا على</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/share/18r6E3c3fo/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+            <a href="https://www.instagram.com/a_m_o_o._r_y/?utm_source=qr&r=nametag" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+            <a href="https://chat.whatsapp.com/DPRjdBAYlEB8E1TPKCH0ZJ?mode=wwt" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"></a>
+            <a href="https://www.tiktok.com/@amoory_stoor?_r=1&_t=ZS-91GCKhSAP6e" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/TikTok_logo.svg" alt="TikTok"></a>
+        </div>
+        <p>&copy; 2025 متجر عموري. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="common.js"></script>
+    <script src="account.js"></script>
+    <script src="data.js"></script>
+    <script src="trending.js"></script>
+</body>
+</html>

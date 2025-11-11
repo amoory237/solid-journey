@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إتمام الطلب - متجر عموري</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="cart.html" class="nav-cart-link" style="position: relative;">
+                <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Shopping Cart"> <span id="cart-count" class="cart-badge">0</span>
+            </a>
+            <div class="logo">
+                <a href="index.html">Amoory Store</a>
+            </div>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="products.html">المتجر</a></li>
+                <li><a href="cart.html">سلة المشتريات</a></li>
+                <li><a href="login.html" id="account-link">حسابي</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <a href="https://chat.whatsapp.com/DPRjdBAYlEB8E1TPKCH0ZJ?mode=wwt" target="_blank" class="whatsapp-banner">
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-icon"> تابعنا على الواتساب للحصول على آخر العروض والتحديثات!</p>
+        </a>
+        <h1>إتمام الطلب</h1>
+        <div class="checkout-layout">
+            <div class="customer-details">
+                <h2>تفاصيل الشحن</h2>
+                <form id="checkout-form">
+                    <div class="form-group">
+                        <label for="name">الاسم الكامل</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div id="crypto-details-group" style="display: none;">
+                        <div class="form-group">
+                            <label for="network-address">عنوان الشبكة</label>
+                            <input type="text" id="network-address" name="network-address" placeholder="أدخل عنوان الشبكة هنا">
+                        </div>
+                        <div class="form-group">
+                            <label for="network-type">نوع الشبكة</label>
+                            <select id="network-type" name="network-type">
+                                <option value="TRC20">TRC20 (Tron)</option>
+                                <option value="BEP20">BEP20 (BNB Smart Chain)</option>
+                                <option value="ERC20">ERC20 (Ethereum)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="binance-id">معرف منصة Binance (Pay ID)</label>
+                            <input type="text" id="binance-id" name="binance-id" placeholder="اختياري: أدخل معرف الدفع هنا">
+                        </div>
+                        <div class="form-group">
+                            <label for="binance-name">اسم صاحب المعرف داخل المنصة</label>
+                            <input type="text" id="binance-name" name="binance-name" placeholder="أدخل اسم صاحب المعرف">
+                        </div>
+                    </div>
+                    <div class="form-group" id="player-id-group" style="display: none;">
+                        <label for="player-id">معرف اللاعب (ID)</label>
+                        <input type="text" id="player-id" name="player-id" placeholder="أدخل معرف اللاعب هنا">
+                    </div>
+                    <div class="form-group" id="player-name-group" style="display: none;">
+                        <label for="player-name">اسم اللاعب في اللعبة</label>
+                        <input type="text" id="player-name" name="player-name" placeholder="أدخل اسمك داخل اللعبة">
+                    </div>
+                    <!-- الحقل الجديد الذي يظهر بشكل مشروط -->
+                    <div class="form-group" id="phone-number-group" style="display: none;">
+                        <label for="phone-number">رقم الهاتف (مطلوب لبعض المنتجات)</label>
+                        <input type="text" id="phone-number" name="phone-number" placeholder="أدخل رقم الهاتف هنا">
+                    </div>
+
+                    <h2>طرق الدفع</h2>
+                    <div class="payment-methods">
+                        <div class="payment-option">
+                            <input type="radio" id="bank" name="payment" value="bank" required checked>
+                            <label for="bank">
+                                <span>بنك الخرطوم</span>
+                                <div class="payment-details">
+                                    <p><strong>رقم الحساب:</strong> 2252436</p>
+                                    <p><strong>اسم صاحب الحساب:</strong> عمر عوض الجيد احمد محمد</p>
+                                    <p><strong>ملاحظة هامة:</strong> يجب أن يحتوي إشعار التحويل على تعليق: "من اسمك إلى عمر عوض مقابل كاش تم استلامه".</p>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="receipt">إرفاق صورة الإيصال</label>
+                            <input type="file" id="receipt" name="receipt" accept="image/*" required>
+                            <small>الرجاء إرفاق صورة واضحة لإيصال التحويل (الأبيض والأخضر).</small>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="checkout-btn">تأكيد الطلب</button>
+                </form>
+            </div>
+            <div id="order-summary" class="order-summary">
+                <h2>ملخص الطلب</h2>
+                <!-- سيتم عرض ملخص الطلب هنا -->
+            </div>
+        </div>
+    </main>
+
+    <div id="trending-now">
+        <!-- سيتم عرض المنتجات الرائجة هنا -->
+    </div>
+
+    <footer>
+        <p class="footer-title">تابعنا على</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/share/18r6E3c3fo/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+            <a href="https://www.instagram.com/a_m_o_o._r_y/?utm_source=qr&r=nametag" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+            <a href="https://chat.whatsapp.com/DPRjdBAYlEB8E1TPKCH0ZJ?mode=wwt" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"></a>
+            <a href="https://www.tiktok.com/@amoory_stoor?_r=1&_t=ZS-91GCKhSAP6e" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/TikTok_logo.svg" alt="TikTok"></a>
+        </div>
+        <p>&copy; 2025 متجر عموري. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="common.js"></script>
+    <script src="checkout.js"></script>
+    <script src="data.js"></script>
+    <script src="trending.js"></script>
+</body>
+</html>

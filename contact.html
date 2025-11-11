@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - متجر عموري</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="cart.html" class="nav-cart-link" style="position: relative;">
+                <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Shopping Cart"> <span id="cart-count" class="cart-badge">0</span>
+            </a>
+            <div class="logo">
+                <a href="index.html">Amoory Store</a>
+            </div>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="products.html">المتجر</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+                <li><a href="cart.html">سلة المشتريات</a></li>
+                <li><a href="login.html" id="account-link">حسابي</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contact-container">
+            <h1>تواصل معنا</h1>
+            <p>نحن هنا لمساعدتك! سواء كان لديك سؤال حول منتجاتنا أو تحتاج إلى دعم، لا تتردد في التواصل معنا.</p>
+
+            <div class="contact-grid">
+                <div class="contact-form-section">
+                    <h3>أرسل لنا رسالة</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="contact-name">الاسم</label>
+                            <input type="text" id="contact-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">البريد الإلكتروني</label>
+                            <input type="email" id="contact-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">رسالتك</label>
+                            <textarea id="contact-message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="checkout-btn">إرسال</button>
+                    </form>
+                </div>
+                <div class="contact-info-section">
+                    <h3>معلومات التواصل</h3>
+                    <p><i class="fas fa-envelope"></i> <strong>البريد الإلكتروني:</strong> <a href="mailto:amoory14425@gmail.com">amoory14425@gmail.com</a></p>
+                    <p><i class="fab fa-whatsapp"></i> <strong>واتساب:</strong> <a href="https://wa.me/249999200203" target="_blank">+249 999 200 203</a></p>
+                    <h3 style="margin-top: 2rem;">تابعنا على</h3>
+                    <div class="social-icons-contact">
+                        <a href="https://www.facebook.com/share/18r6E3c3fo/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/a_m_o_o._r_y/?utm_source=qr&r=nametag" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+                        <a href="https://chat.whatsapp.com/DPRjdBAYlEB8E1TPKCH0ZJ?mode=wwt" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"></a>
+                        <a href="https://www.tiktok.com/@amoory_stoor?_r=1&_t=ZS-91GCKhSAP6e" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/TikTok_logo.svg" alt="TikTok"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="toast-notification"></div>
+
+    <script src="common.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>

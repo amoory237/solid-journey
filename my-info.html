@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معلوماتي الشخصية - متجر عموري</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="cart.html" class="nav-cart-link" style="position: relative;">
+                <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Shopping Cart"> <span id="cart-count" class="cart-badge">0</span>
+            </a>
+            <div class="logo">
+                <a href="index.html">Amoory Store</a>
+            </div>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="products.html">المتجر</a></li>
+                <li><a href="cart.html">سلة المشتريات</a></li>
+                <li><a href="profile.html" id="account-link">ملفي الشخصي</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <div class="profile-container">
+            <h1>معلوماتي الشخصية</h1>
+
+            <div class="profile-picture-container">
+                <img src="https://i.postimg.cc/ht605T5v/default-avatar.png" alt="الصورة الشخصية" id="user-avatar">
+                <label for="avatar-upload" class="avatar-upload-label">تغيير الصورة</label>
+                <input type="file" id="avatar-upload" accept="image/*" style="display: none;">
+            </div>
+
+            <div id="user-info">
+                <!-- سيتم عرض معلومات المستخدم هنا -->
+            </div>
+    
+            <form id="user-details-form" style="margin-top: 2rem; border-top: 1px solid #eee; padding-top: 1.5rem;">
+                <h3>معلومات الدفع والألعاب (اختياري)</h3>
+                <p style="font-size: 0.9rem; color: #666; margin-bottom: 1.5rem;">يمكنك حفظ معلوماتك هنا لتعبئتها تلقائياً عند إتمام الطلب.</p>
+
+                <h4><i class="fas fa-wallet"></i> معلومات الدفع بالعملات الرقمية</h4>
+                <div class="form-group">
+                    <label for="user-network-address">عنوان الشبكة (Crypto)</label>
+                    <input type="text" id="user-network-address" name="networkAddress" placeholder="مثال: 0x...">
+                </div>
+                <div class="form-group">
+                    <label for="user-network-type">نوع الشبكة</label>
+                    <select id="user-network-type" name="networkType">
+                        <option value="">-- اختر --</option>
+                        <option value="TRC20">TRC20 (Tron)</option>
+                        <option value="BEP20">BEP20 (BNB Smart Chain)</option>
+                        <option value="ERC20">ERC20 (Ethereum)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="user-binance-id">معرف منصة Binance (Pay ID)</label>
+                    <input type="text" id="user-binance-id" name="binanceId" placeholder="مثال: 12345678">
+                </div>
+                <div class="form-group">
+                    <label for="user-binance-name">اسم صاحب المعرف داخل المنصة</label>
+                    <input type="text" id="user-binance-name" name="binanceName" placeholder="مثال: اسمك هنا">
+                </div>
+    
+                <h4 style="margin-top: 2rem;"><i class="fas fa-gamepad"></i> معلومات الألعاب</h4>
+                <div class="form-group">
+                    <label for="user-pubg-id">معرف لعبة ببجي (PUBG ID)</label>
+                    <input type="text" id="user-pubg-id" name="pubgId" placeholder="أدخل رقم ID">
+                </div>
+                <div class="form-group">
+                    <label for="user-pubg-name">اسم اللاعب في ببجي</label>
+                    <input type="text" id="user-pubg-name" name="pubgName" placeholder="أدخل اسم اللاعب">
+                </div>
+                <div class="form-group">
+                    <label for="user-freefire-id">معرف لعبة فري فاير (Free Fire ID)</label>
+                    <input type="text" id="user-freefire-id" name="freefireId" placeholder="أدخل رقم ID">
+                </div>
+                <div class="form-group">
+                    <label for="user-freefire-name">اسم اللاعب في فري فاير</label>
+                    <input type="text" id="user-freefire-name" name="freefireName" placeholder="أدخل اسم اللاعب">
+                </div>
+    
+                <button type="submit" class="checkout-btn">حفظ المعلومات</button>
+            </form>
+
+            <div id="edit-user-info" style="margin-top: 2rem;">
+                <button id="change-password-btn" class="btn-secondary">تغيير كلمة المرور</button>
+                <form id="change-password-form" style="display: none; margin-top: 1.5rem; border-top: 1px solid #eee; padding-top: 1.5rem;">
+                    <h3>تغيير كلمة المرور</h3>
+                    <div class="form-group">
+                        <label for="current-password">كلمة المرور الحالية</label>
+                        <input type="password" id="current-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">كلمة المرور الجديدة</label>
+                        <input type="password" id="new-password" required>
+                    </div>
+                    <button type="submit" class="checkout-btn">حفظ التغييرات</button>
+                    <button type="button" id="cancel-change-password" class="remove-btn" style="margin-right: 10px;">إلغاء</button>
+                </form>
+            </div>
+
+            <a href="profile.html" class="btn-secondary" style="margin-top: 2rem; display: inline-block;">العودة للملف الشخصي</a>
+        </div>
+    </main>
+
+    <footer>
+        <p class="footer-title">تابعنا على</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/share/18r6E3c3fo/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+            <a href="https://www.instagram.com/a_m_o_o._r_y/?utm_source=qr&r=nametag" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+            <a href="https://chat.whatsapp.com/DPRjdBAYlEB8E1TPKCH0ZJ?mode=wwt" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"></a>
+            <a href="https://www.tiktok.com/@amoory_stoor?_r=1&_t=ZS-91GCKhSAP6e" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/TikTok_logo.svg" alt="TikTok"></a>
+        </div>
+        <p>&copy; 2025 متجر عموري. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="common.js"></script>
+    <script src="my-info.js"></script>
+</body>
+</html>
